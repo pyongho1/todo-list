@@ -4,7 +4,6 @@ const submitBtn = document.getElementById("submit-button");
 const todoList = document.getElementById("todo-list");
 const resetBtn = document.getElementById("reset-button");
 
-
 // ------- Main Listeners -------
 
 // Submit Button
@@ -23,4 +22,13 @@ submitBtn.addEventListener("click", function (evt) {
 resetBtn.addEventListener("click", function (evt) {
   inputField.value = "";
   document.querySelector("ul").innerHTML = "";
+});
+
+// Delete Button
+todoList.addEventListener("click", function (evt) {
+  // evt.target.li
+  console.log(evt.target);
+  // for (let test of todoList) {
+  //   console.log(test);
+  // }
 });
