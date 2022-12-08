@@ -16,7 +16,6 @@ submitBtn.addEventListener("click", function (evt) {
   } else {
     inputField.value = "";
     document.querySelector("ul").appendChild(li);
-    document.querySelector("ul").appendChild(button);
   }
 });
 
@@ -29,6 +28,5 @@ resetBtn.addEventListener("click", function (evt) {
 // Delete Button
 list.addEventListener("click", function (e) {
   e.target.remove();
-  // console.log(e.target.children);
   console.log(e.target);
 });
