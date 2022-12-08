@@ -3,6 +3,7 @@ const inputField = document.getElementById("mainInput");
 const submitBtn = document.getElementById("submit-button");
 const todoList = document.getElementById("todo-list");
 const resetBtn = document.getElementById("reset-button");
+const list = document.querySelector("ul");
 
 // ------- Main Listeners -------
 
@@ -15,6 +16,7 @@ submitBtn.addEventListener("click", function (evt) {
   } else {
     inputField.value = "";
     document.querySelector("ul").appendChild(li);
+    document.querySelector("ul").appendChild(button);
   }
 });
 
@@ -25,10 +27,8 @@ resetBtn.addEventListener("click", function (evt) {
 });
 
 // Delete Button
-todoList.addEventListener("click", function (evt) {
-  // evt.target.li
-  console.log(evt.target);
-  // for (let test of todoList) {
-  //   console.log(test);
-  // }
+list.addEventListener("click", function (e) {
+  e.target.remove();
+  // console.log(e.target.children);
+  console.log(e.target);
 });
